@@ -1,0 +1,56 @@
+{
+  "status": "Arithmetic and sensitivity checks only; no strategy-return backtest",
+  "microsoft": {
+    "currency_unit": "USD millions",
+    "ocf25": 136162,
+    "ocf24": 118548,
+    "capex25": 64551,
+    "capex24": 44477,
+    "ocfGrowthPct": 14.85811654350979,
+    "capexGrowthPct": 45.13343975537918,
+    "cashFcf25": 71611,
+    "cashFcf24": 74071,
+    "cashFcfGrowthPct": -3.3211378272198333,
+    "capexShareOcf25Pct": 47.407499889837105,
+    "capexShareOcf24Pct": 37.51813611364173
+  },
+  "walmart": {
+    "salesGrowthMidpointRevisionPercentagePoints": 0.75,
+    "adjustedEpsMidpointRevisionDollars": 0.020000000000000462
+  },
+  "syntheticCostStress": [
+    {
+      "grossEdgeBps": 10,
+      "roundTripCostBps": 5,
+      "netEdgeBps": 5
+    },
+    {
+      "grossEdgeBps": 10,
+      "roundTripCostBps": 10,
+      "netEdgeBps": 0
+    },
+    {
+      "grossEdgeBps": 10,
+      "roundTripCostBps": 20,
+      "netEdgeBps": -10
+    }
+  ],
+  "syntheticHitRate": {
+    "winProbability": 0.55,
+    "avgWinBps": 20,
+    "avgLossBps": 25,
+    "roundTripCostBps": 5,
+    "expectedNetBps": -5.25
+  },
+  "researchDatePacific": "2026-09-15",
+  "sources": {
+    "microsoft": "https://www.microsoft.com/en-us/Investor/earnings/FY-2025-Q4/press-release-webcast",
+    "walmart": "https://stock.walmart.com/sec-filings/all-sec-filings/content/0000104169-25-000120/earningspresentationfy26.htm"
+  },
+  "limitations": [
+    "Document arithmetic and hypothetical cost checks only",
+    "No historical strategy-return backtest",
+    "Microsoft cash capex excludes noncash lease additions",
+    "Cost and hit-rate inputs are invented scenarios, not observed trading data"
+  ]
+}
