@@ -28,7 +28,7 @@ Forecast distributions and relative rankings, not guaranteed price targets. Sepa
 | Months: 1–6 months | Which stocks and industries have persistent relative strength? | 12–1 momentum, industry momentum, analyst changes, operating trends | Momentum crashes, crowding, and correlated exposures |
 | Long term: 1–5 years | Is operating performance, valuation and balance-sheet resilience attractive across scenarios? | Profitability, cash conversion, valuation, investment discipline, dilution and debt | Average-return evidence does not deliver an exact future price/date |
 
-The horizons and boundaries are product choices to test. Academic studies often use different formation and holding periods.
+The horizons and boundaries are product choices to test. Academic studies often use different formation and holding periods. Initial 1–5-year output is assumption-based business/valuation scenarios, not calibrated multi-year forecasts. E07 tests only through approximately one year; separate preregistered multi-year tests with sufficient history would be required before reporting 3–5-year forecast probabilities.
 
 ## Signal families and priorities
 
