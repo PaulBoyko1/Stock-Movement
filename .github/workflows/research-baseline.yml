@@ -1,0 +1,37 @@
+name: Research baseline
+on:
+  push:
+    branches: [codex/research-foundation, main]
+    paths:
+      - 'research/code/**'
+      - 'research/tests/**'
+      - 'research/experiments/E04-P1-specification.md'
+      - '.github/workflows/research-baseline.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  industry-baseline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+      - name: Verify accounting and information timing
+        run: python -m unittest discover -s research/tests -v
+      - name: Run frozen historical industry experiment
+        run: python research/code/industry_baseline.py --output-dir work/e04-p1
+      - name: Publish run summary
+        run: cat work/e04-p1/report.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Retain source vintage and research results
+        if: success()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: e04-p1-research
+          path: work/e04-p1/
+          retention-days: 30
+          if-no-files-found: error
