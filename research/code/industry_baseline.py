@@ -216,7 +216,7 @@ def read_source(input_zip=None, expected_sha256=None):
 def build_report(result):
     lines = ["# E04-P1 observed results", "",
              "Retrospective research portfolios; after assumed allocation costs using a proportional target-weight approximation. Not an executable ETF backtest.", "",
-             "| Cost per dollar traded | Strategy CAGR | Benchmark CAGR | Strategy max drawdown | Active mean/year | Approx. 95% interval |",
+             "| Cost per dollar traded | Strategy CAGR | Benchmark CAGR | Strategy max month-end drawdown | Active mean/year | Approx. 95% interval |",
              "|---|---:|---:|---:|---:|---:|"]
     for cost, data in result["scenarios"].items():
         period = data["2000-2025"]
@@ -225,9 +225,9 @@ def build_report(result):
         lines.append(f"| {cost} bp | {s['cagr']:.2%} | {b['cagr']:.2%} | {s['max_month_end_drawdown']:.2%} | "
                      f"{a['annual_arithmetic_mean']:.2%} | [{lo:.2%}, {hi:.2%}] |")
     lines += ["", "Active mean is the annualized arithmetic average of monthly strategy-minus-benchmark returns, not a funded CAGR.",
-              "Intervals use Newey-West lag 12 and a normal approximation; factor-adjusted attribution remains outstanding.", "",
+              "Intervals use Newey-West lag 12 and a normal approximation; factor-adjusted attribution is a separate E04-P2 experiment.", "",
               "## Primary 10 bp scenario by period", "",
-              "| Period | Strategy CAGR | Benchmark CAGR | Strategy drawdown | Benchmark drawdown |",
+              "| Period | Strategy CAGR | Benchmark CAGR | Strategy month-end drawdown | Benchmark month-end drawdown |",
               "|---|---:|---:|---:|---:|"]
     for name, period in result["scenarios"]["10"].items():
         s, b = period["strategy"], period["benchmark"]
@@ -236,6 +236,7 @@ def build_report(result):
               "Raw archive SHA-256: " + result["source"]["sha256"],
               "Code commit: " + result["code_commit"],
               "Source: " + SOURCE, "",
+              "Drawdowns use month-end observations; subperiod peaks reset at each subperiod start.",
               "The run artifact contains the exact raw vintage, manifest, monthly results and report. Retain it before artifact expiry.",
               "Monthly reallocation fees use a proportional target-weight haircut approximation, not exact self-financing transaction notionals.",
               "They omit underlying constituent trading, fund expenses, tracking error, taxes and executable-price verification.",
