@@ -1,6 +1,6 @@
 # Experiment plan and research backlog
 
-Status: proposed tests, not completed return backtests. Parameter values below are initial specifications to preregister; they are not proven or optimized settings. See the [evidence register](evidence-register.md) for paper motivations and [calculation audit](calculation-audit.json) for the limited checks actually executed.
+Status: the E01–E10 designs below remain the broader research backlog. A separately frozen E04-P1 industry-allocation proxy has now run; see the [results and limitations](results/E04-P1-results.md). It does not complete the planned executable ETF or liquid-stock tests. Parameter values below are initial specifications to preregister; they are not proven or optimized settings. See the [evidence register](evidence-register.md) for paper motivations and [calculation audit](calculation-audit.json) for the limited checks actually executed.
 
 ## A common protocol
 
@@ -118,4 +118,4 @@ Forward paper trading must then compare expected and observed fills, costs, cali
 3. Synthetic cost arithmetic: a hypothetical 10 bp gross edge becomes +5/0/−10 bp after assumed total round-trip costs of 5/10/20 bp.
 4. Synthetic hit-rate arithmetic: 55% wins of 20 bp and 45% losses of 25 bp yield −0.25 bp before costs, or −5.25 bp after 5 bp costs.
 
-The first two are document arithmetic, the last two are hypothetical sensitivity checks. None measures investment performance. Local execution tools failed to start, and no point-in-time price/consensus dataset was loaded. No historical return backtest, confidence interval, calibrated probability or validated edge is claimed.
+The first two are document arithmetic, the last two are hypothetical sensitivity checks. None measures investment performance. Local execution tools failed to start, and no point-in-time price/consensus dataset was loaded. Those statements describe the September 15 initial review. On September 16, E04-P1 added a historical industry-portfolio proxy backtest and descriptive uncertainty interval. No calibrated stock forecast or validated tradable edge is claimed.

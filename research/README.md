@@ -2,7 +2,11 @@
 
 Research date: September 15, 2026 (Pacific). Scope agreed with the owner: liquid U.S. stocks and ETFs. Immediate purpose: research and decision support; later stages may add alerts, paper trading, and automated execution.
 
-This is a research proposal, not an implemented forecasting system. The first pass screened 27 primary research papers, the original RRG guide, public data documentation, and four historical company earnings releases with supporting material. Verification means bibliographic details and the cited findings were checked against primary pages or accessible paper sections. It does not mean every paper was read end to end, replicated, or shown to work in today's market.
+This is a research proposal with one executed industry-allocation proxy experiment, not an implemented stock forecasting system. The first pass screened 27 primary research papers, the original RRG guide, public data documentation, and four historical company earnings releases with supporting material. Verification means bibliographic details and the cited findings were checked against primary pages or accessible paper sections. It does not mean every paper was read end to end, replicated, or shown to work in today's market.
+
+## Follow-up: September 16, 2026
+
+The first [historical industry-momentum proxy result](results/E04-P1-results.md) is now recorded: 312 months, 16 implementation tests passed, and three fixed allocation-cost scenarios. This is narrower than a liquid-stock or tradable-ETF backtest. [Data and idea intake](intake/README.md) is ready as a guide and templates; no user dataset has been imported.
 
 ## Start here
 
@@ -15,7 +19,7 @@ The most promising first research product combines medium-horizon price momentum
 
 ## What “proven” should mean
 
-Use precise stages: published historical result → internally reproduced → tested out of sample after costs → forward paper traded → eligible for controlled deployment. Every candidate currently remains at the literature/hypothesis stage in this repository. A study can be reproducible yet impractical in a liquid-stock universe; a useful explanation of prices can also fail as a forecast.
+Use precise stages: published historical result → internally reproduced → tested out of sample after costs → forward paper traded → eligible for controlled deployment. Most candidates remain at the literature/hypothesis stage. E04-P1 has one executed historical proxy test; its uncertainty interval includes zero and it has not passed executable-market or forward validation. A study can be reproducible yet impractical in a liquid-stock universe; a useful explanation of prices can also fail as a forecast.
 
 Forecast distributions and relative rankings, not guaranteed price targets. Separate probability of a positive raw return from probability of outperforming a benchmark. A bullish market can give many stocks positive returns without any stock-selection skill.
 
@@ -114,4 +118,4 @@ For production research, obtain point-in-time membership, delisting returns, cor
 5. Add paper-trading alerts only for strategies with adequate out-of-sample evidence.
 6. Consider automation after forward monitoring supports execution assumptions, with exposure limits, reconciliation, data-failure handling and a kill switch.
 
-This review completed source screening, hypothesis design and arithmetic checks. It did not ingest a survivorship-free price history, run a historical return backtest, implement the UI, or validate a tradable edge.
+The initial review completed source screening, hypothesis design and arithmetic checks. The September 16 follow-up executed E04-P1 on reconstructed monthly industry returns. A point-in-time liquid-stock dataset, application UI, validated earnings model and tradable edge remain outstanding.
