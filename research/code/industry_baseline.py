@@ -61,9 +61,9 @@ def parse_monthly(text):
                 continue
             raise ValueError("Changed industry header: " + repr(fields))
         if not re.fullmatch(r"\d{6}", fields[0]):
-            if rows:
+            if rows and fields[0].lower() == "average equal weighted returns -- monthly":
                 break
-            raise ValueError("Expected monthly row")
+            raise ValueError("Unexpected monthly section terminator: " + repr(fields))
         if len(fields) != len(INDUSTRIES) + 1:
             raise ValueError("Malformed monthly row")
         raw = [float(x) for x in fields[1:]]
@@ -215,7 +215,7 @@ def read_source(input_zip=None, expected_sha256=None):
 
 def build_report(result):
     lines = ["# E04-P1 observed results", "",
-             "Retrospective research portfolios; after assumed allocation costs. Not an executable ETF backtest.", "",
+             "Retrospective research portfolios; after assumed allocation costs using a proportional target-weight approximation. Not an executable ETF backtest.", "",
              "| Cost per dollar traded | Strategy CAGR | Benchmark CAGR | Strategy max drawdown | Active mean/year | Approx. 95% interval |",
              "|---|---:|---:|---:|---:|---:|"]
     for cost, data in result["scenarios"].items():
@@ -237,7 +237,8 @@ def build_report(result):
               "Code commit: " + result["code_commit"],
               "Source: " + SOURCE, "",
               "The run artifact contains the exact raw vintage, manifest, monthly results and report. Retain it before artifact expiry.",
-              "Monthly reallocation fees omit underlying constituent trading, fund expenses, tracking error, taxes and executable-price verification.",
+              "Monthly reallocation fees use a proportional target-weight haircut approximation, not exact self-financing transaction notionals.",
+              "They omit underlying constituent trading, fund expenses, tracking error, taxes and executable-price verification.",
               "Subperiods slice one continuous portfolio; entry and liquidation fees are not restarted at decade boundaries.",
               "No liquid-stock universe filter or modern GICS mapping is applied.",
               "This fixed rule was registered before this run but the historical period is not pristine out of sample.", ""]

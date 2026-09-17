@@ -54,6 +54,11 @@ class ParserTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             model.parse_monthly(source(rows(2)).replace("NoDur", "Unexpected"))
 
+    def test_unrecognized_tail_is_not_silently_accepted(self):
+        fixture = source(rows(2)).replace("Average Equal Weighted Returns -- Monthly", "CORRUPTED DATA")
+        with self.assertRaises(ValueError):
+            model.parse_monthly(fixture)
+
     def test_invalid_calendar_month_fails(self):
         with self.assertRaises(ValueError):
             model.parse_monthly(source([(199913, [0.0] * 12)]))
