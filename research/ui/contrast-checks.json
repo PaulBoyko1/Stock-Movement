@@ -1,0 +1,53 @@
+{
+  "scope": "Selected CSS color pairs only; not a complete accessibility audit",
+  "checks": [
+    {
+      "label": "light muted on panel",
+      "foreground": "#52665f",
+      "background": "#ffffff",
+      "ratio": 6.132173206807754
+    },
+    {
+      "label": "light green badge",
+      "foreground": "#24614c",
+      "background": "#e7f1e9",
+      "ratio": 6.284167393001714
+    },
+    {
+      "label": "light amber badge",
+      "foreground": "#88571d",
+      "background": "#fbf1df",
+      "ratio": 5.4697289340214095
+    },
+    {
+      "label": "light blue badge",
+      "foreground": "#355d8c",
+      "background": "#eaf0f9",
+      "ratio": 5.92105083942229
+    },
+    {
+      "label": "dark muted on panel",
+      "foreground": "#aec4b7",
+      "background": "#192825",
+      "ratio": 8.296711594767363
+    },
+    {
+      "label": "dark green badge",
+      "foreground": "#94d7b0",
+      "background": "#233f31",
+      "ratio": 6.900673188671161
+    },
+    {
+      "label": "dark amber badge",
+      "foreground": "#e7bc77",
+      "background": "#3c3222",
+      "ratio": 7.09402250262193
+    },
+    {
+      "label": "dark blue badge",
+      "foreground": "#a4c1eb",
+      "background": "#263645",
+      "ratio": 6.725248214359773
+    }
+  ]
+}
