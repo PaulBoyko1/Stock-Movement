@@ -2,11 +2,17 @@
 
 Research date: September 15, 2026 (Pacific). Scope agreed with the owner: liquid U.S. stocks and ETFs. Immediate purpose: research and decision support; later stages may add alerts, paper trading, and automated execution.
 
-This is a research proposal with one executed industry-allocation proxy experiment, not an implemented stock forecasting system. The first pass screened 27 primary research papers, the original RRG guide, public data documentation, and four historical company earnings releases with supporting material. Verification means bibliographic details and the cited findings were checked against primary pages or accessible paper sections. It does not mean every paper was read end to end, replicated, or shown to work in today's market.
+This is a research foundation with an executed industry-allocation proxy experiment, a subsequent factor diagnostic, and an offline UI concept. It is not an implemented stock forecasting system. The first pass screened 27 primary research papers, the original RRG guide, public data documentation, and four historical company earnings releases with supporting material. Verification means bibliographic details and the cited findings were checked against primary pages or accessible paper sections. It does not mean every paper was read end to end, replicated, or shown to work in today's market.
 
 ## Follow-up: September 16, 2026
 
 The first [historical industry-momentum proxy result](results/E04-P1-results.md) is now recorded: 312 months, 16 implementation tests passed, and three fixed allocation-cost scenarios. This is narrower than a liquid-stock or tradable-ETF backtest. [Data and idea intake](intake/README.md) is ready as a guide and templates; no user dataset has been imported.
+
+## Follow-up: September 17, 2026
+
+The [preregistered E04-P2 diagnostic](experiments/E04-P2-specification.md) reproduced the baseline and assessed six contemporaneous stock factors. Primary annual arithmetic alpha is about 0.29%, with a 95% HAC interval of −2.67% to +3.24%. See the [full attribution result](results/E04-P2-results.md). This does not establish positive conditional alpha, and the unchanged rule stays in research.
+
+The [offline interactive concept](ui/index.html) now explores Overview, Evidence, Rotation, Lab and Inbox, with horizon selection and simple/advanced detail. It uses dated historical fixtures and explicitly illustrative rotation positions. [Design notes](ui/design-notes.md) describe the interactions and what a working product still needs. No user dataset has been imported, and the prototype provides no persistent storage.
 
 ## Start here
 
@@ -118,4 +124,4 @@ For production research, obtain point-in-time membership, delisting returns, cor
 5. Add paper-trading alerts only for strategies with adequate out-of-sample evidence.
 6. Consider automation after forward monitoring supports execution assumptions, with exposure limits, reconciliation, data-failure handling and a kill switch.
 
-The initial review completed source screening, hypothesis design and arithmetic checks. The September 16 follow-up executed E04-P1 on reconstructed monthly industry returns. A point-in-time liquid-stock dataset, application UI, validated earnings model and tradable edge remain outstanding.
+The initial review completed source screening, hypothesis design and arithmetic checks. The September 16 follow-up executed E04-P1 on reconstructed monthly industry returns. The September 17 follow-up added E04-P2 attribution and an offline UI prototype. A point-in-time liquid-stock dataset, connected application, validated earnings model and tradable edge remain outstanding.
