@@ -13,6 +13,9 @@ network = []
 
 def check(name, condition):
     if not condition:
+        (OUTPUT / "failure.json").write_text(json.dumps({"failed": name, "passed": checks}, indent=2))
+        page.screenshot(path=str(OUTPUT / "failure.jpg"), type="jpeg", quality=65, full_page=True)
+        print("OVERFLOW_DIAGNOSTICS", page.evaluate("Array.from(document.querySelectorAll('body *')).filter(e=>e.getBoundingClientRect().right>innerWidth+1).map(e=>({tag:e.tagName,id:e.id,class:e.className,width:e.getBoundingClientRect().width})).slice(0,30)"))
         raise AssertionError(name)
     checks.append(name)
 
