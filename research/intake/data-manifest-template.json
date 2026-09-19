@@ -1,0 +1,44 @@
+{
+  "dataset_id": null,
+  "private_location": null,
+  "source_name": null,
+  "source_url": null,
+  "retrieved_at": null,
+  "source_publication_time": null,
+  "content_sha256": null,
+  "format": null,
+  "date_range": {
+    "start": null,
+    "end": null
+  },
+  "timezone": null,
+  "security_identifier": null,
+  "frequency": null,
+  "units": null,
+  "prices": {
+    "adjustment_basis": "unknown",
+    "dividend_treatment": "unknown",
+    "corporate_action_vintage": null
+  },
+  "availability": {
+    "event_time_field": null,
+    "first_available_time_field": null,
+    "receipt_time_field": null,
+    "revised_data": "unknown"
+  },
+  "universe": {
+    "historical_membership": "unknown",
+    "delistings": "unknown"
+  },
+  "estimates": {
+    "historical_snapshot": "unknown",
+    "consensus_basis": null
+  },
+  "missing_value_codes": [],
+  "transformations": [],
+  "data_status": "unknown",
+  "rights_status": "unknown",
+  "visibility": "private",
+  "publication_authorized": false,
+  "review_notes": []
+}

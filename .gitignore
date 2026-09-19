@@ -1,0 +1,9 @@
+# Raw user submissions belong outside this public repository.
+/private/
+/data/raw/
+/work/
+.env
+.env.*
+*.pem
+__pycache__/
+*.pyc

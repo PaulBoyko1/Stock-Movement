@@ -1,0 +1,496 @@
+{
+  "schema_version": 1,
+  "scope_note": "Structured edition of the 27-paper first-pass screen in research/evidence-register.md, dated September 15, 2026. R01–R27 preserve that register's identifiers. Publication identity and findings inherit the register's stated screening scope; this catalog does not represent a fresh source review, full reading of every paper, or independent replication. The published stage describes publication status, not a verified Stock-Movement signal. Horizons tag proposed research applications rather than validated forecast horizons. Methodology papers may apply across horizons without supplying predictive signals. Historical findings do not establish current net tradability in liquid U.S. stocks or ETFs. Source URLs select one primary record already listed in the register, sometimes a working version with the published identity noted in verification_scope.",
+  "papers": [
+    {
+      "id": "R01",
+      "title": "Value and Momentum Everywhere",
+      "authors": "Asness, Moskowitz, Pedersen",
+      "year": 2013,
+      "family": "Value and momentum",
+      "horizons": [
+        "months",
+        "years"
+      ],
+      "evidence_stage": "published",
+      "finding": "Historical evidence across eight markets and asset classes supports examining value and momentum jointly, including their diversification.",
+      "limitation": "The finding does not establish short-horizon stock timing or an executable long-only implementation.",
+      "application": "Establish separate momentum and valuation baselines before testing combinations.",
+      "source_url": "https://www.aqr.com/Insights/Research/Journal-Article/Value-and-Momentum-Everywhere",
+      "source_kind": "Predictive candidate",
+      "verification_scope": "Register reports a primary abstract and summary screen; not independently replicated in Stock-Movement."
+    },
+    {
+      "id": "R02",
+      "title": "Time Series Momentum",
+      "authors": "Moskowitz, Ooi, Pedersen",
+      "year": 2012,
+      "family": "Own-price trend",
+      "horizons": [
+        "months",
+        "years"
+      ],
+      "evidence_stage": "published",
+      "finding": "Past own returns predict subsequent returns across the studied futures and forward contracts.",
+      "limitation": "Own-return trends differ from cross-sectional stock rankings; applying this result to sector ETFs requires new testing.",
+      "application": "Build simple own-trend benchmarks and use them as risk context.",
+      "source_url": "https://www.aqr.com/Insights/Research/Journal-Article/Time-Series-Momentum",
+      "source_kind": "Predictive candidate",
+      "verification_scope": "Register reports a primary summary screen; not independently replicated in Stock-Movement."
+    },
+    {
+      "id": "R03",
+      "title": "The Other Side of Value: The Gross Profitability Premium",
+      "authors": "Novy-Marx",
+      "year": 2013,
+      "family": "Profitability and valuation",
+      "horizons": [
+        "months",
+        "years"
+      ],
+      "evidence_stage": "published",
+      "finding": "Gross profits relative to assets help explain differences in average stock returns and complement value measures.",
+      "limitation": "Gross profitability is a specific measure, not every notion of quality or a forecast of the next earnings-day move.",
+      "application": "Test a sector-aware profitability baseline alongside valuation.",
+      "source_url": "https://www.nber.org/papers/w15940",
+      "source_kind": "Predictive candidate",
+      "verification_scope": "Register reports a primary abstract screen. The linked working version dates to 2010 and has a slightly longer title; the catalog uses the 2013 publication identity. No Stock-Movement replication."
+    },
+    {
+      "id": "R04",
+      "title": "A Five-Factor Asset Pricing Model",
+      "authors": "Fama, French",
+      "year": 2015,
+      "family": "Factor attribution",
+      "horizons": [
+        "months",
+        "years"
+      ],
+      "evidence_stage": "published",
+      "finding": "Adding profitability and investment to size and value improves explanation of average returns relative to the three-factor model, while leaving documented failures.",
+      "limitation": "An explanatory asset-pricing model does not automatically supply a stock-picking strategy.",
+      "application": "Benchmark risk exposures and measure whether candidate signals add explanatory value beyond known factors.",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S0304405X14002323",
+      "source_kind": "Explanatory model",
+      "verification_scope": "Register reports screening of the abstract and available sections; the paper itself has not been independently replicated in Stock-Movement."
+    },
+    {
+      "id": "R05",
+      "title": "Momentum Crashes",
+      "authors": "Daniel, Moskowitz",
+      "year": 2016,
+      "family": "Momentum risk",
+      "horizons": [
+        "weeks",
+        "months",
+        "years"
+      ],
+      "evidence_stage": "published",
+      "finding": "Momentum portfolios can experience severe losses during rebounds after market declines and elevated volatility.",
+      "limitation": "This does not establish that any particular volatility filter will reliably avoid future crashes.",
+      "application": "Expose tail risk and evaluate momentum performance across different market conditions.",
+      "source_url": "https://www.nber.org/papers/w20439",
+      "source_kind": "Risk and context",
+      "verification_scope": "Register reports a primary abstract screen. The linked working version dates to 2014; the catalog uses the 2016 publication identity. No Stock-Movement replication."
+    },
+    {
+      "id": "R06",
+      "title": "Betting Against Beta",
+      "authors": "Frazzini, Pedersen",
+      "year": 2014,
+      "family": "Beta and defensive exposure",
+      "horizons": [
+        "months",
+        "years"
+      ],
+      "evidence_stage": "published",
+      "finding": "The studied portfolio constructions show a low-beta versus high-beta premium across countries and assets.",
+      "limitation": "The leveraged long-short academic factor differs materially from buying a low-volatility ETF.",
+      "application": "Compare candidate portfolios using risk-aware benchmarks.",
+      "source_url": "https://www.aqr.com/insights/research/journal-article/betting-against-beta",
+      "source_kind": "Predictive candidate",
+      "verification_scope": "Register reports a primary summary screen; not independently replicated in Stock-Movement."
+    },
+    {
+      "id": "R07",
+      "title": "Empirical Asset Pricing via Machine Learning",
+      "authors": "Gu, Kelly, Xiu",
+      "year": 2020,
+      "family": "Nonlinear asset-pricing models",
+      "horizons": [
+        "months",
+        "years"
+      ],
+      "evidence_stage": "published",
+      "finding": "Nonlinear models capture useful interactions in risk-premium forecasts, with momentum, liquidity and volatility prominent among the inputs.",
+      "limitation": "These results do not establish minute-level forecasting or justify treating an LLM as a calibrated return predictor.",
+      "application": "Evaluate nonlinear challengers only after establishing linear baselines.",
+      "source_url": "https://www.nber.org/papers/w25398",
+      "source_kind": "Predictive candidate",
+      "verification_scope": "Register reports a primary abstract screen. The working version is from 2018, revised in 2019; the catalog uses the 2020 publication identity. No Stock-Movement replication."
+    },
+    {
+      "id": "R08",
+      "title": "When Is a Liability Not a Liability? Textual Analysis, Dictionaries, and 10-Ks",
+      "authors": "Loughran, McDonald",
+      "year": 2011,
+      "family": "Financial text measurement",
+      "horizons": [
+        "weeks",
+        "months",
+        "years"
+      ],
+      "evidence_stage": "published",
+      "finding": "General negative-word dictionaries misclassify financial language, while domain-specific measures behave differently.",
+      "limitation": "Better sentiment measurement does not demonstrate future returns after costs.",
+      "application": "Create source-linked document comparisons and financial-language baselines.",
+      "source_url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.2010.01625.x",
+      "source_kind": "Measurement method",
+      "verification_scope": "Register reports a primary abstract screen; not independently replicated in Stock-Movement."
+    },
+    {
+      "id": "R09",
+      "title": "Evidence That Stock Prices Do Not Fully Reflect the Implications of Current Earnings for Future Earnings",
+      "authors": "Bernard, Thomas",
+      "year": 1990,
+      "family": "Earnings persistence and drift",
+      "horizons": [
+        "weeks",
+        "months"
+      ],
+      "evidence_stage": "published",
+      "finding": "Historical evidence connects earnings persistence with reactions around subsequent earnings announcements.",
+      "limitation": "The finding does not establish profitability in a modern liquid-stock universe.",
+      "application": "Test earnings surprise and earnings persistence together.",
+      "source_url": "https://deepblue.lib.umich.edu/bitstream/handle/2027.42/28288/0000041.pdf",
+      "source_kind": "Predictive candidate",
+      "verification_scope": "Register reports screening of the paper abstract and relevant material; not independently replicated in Stock-Movement."
+    },
+    {
+      "id": "R10",
+      "title": "Analyst Responsiveness and the Post-Earnings-Announcement Drift",
+      "authors": "Yuan Zhang",
+      "year": 2008,
+      "family": "Analyst revisions and earnings drift",
+      "horizons": [
+        "weeks",
+        "months"
+      ],
+      "evidence_stage": "published",
+      "finding": "Faster analyst forecast revisions coincide with quicker initial information incorporation and less subsequent drift.",
+      "limitation": "Rapid positive revisions need not indicate greater remaining upside.",
+      "application": "Measure the timing, breadth and magnitude of analyst revisions.",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S0165410108000220",
+      "source_kind": "Predictive candidate",
+      "verification_scope": "Register reports screening of the abstract and relevant sections; not independently replicated in Stock-Movement."
+    },
+    {
+      "id": "R11",
+      "title": "Liquidity and the Post-Earnings-Announcement Drift",
+      "authors": "Chordia, Goyal, Gil Sadka, Ronnie Sadka, Shivakumar",
+      "year": 2009,
+      "family": "Earnings drift and trading costs",
+      "horizons": [
+        "weeks",
+        "months"
+      ],
+      "evidence_stage": "published",
+      "finding": "The studied earnings drift is much smaller among highly liquid stocks, and estimated trading costs absorb much of the paper profits.",
+      "limitation": "These historical results constrain the proposed liquid universe; they are not current expected-return estimates.",
+      "application": "Make liquidity segmentation and transaction costs central to earnings-drift tests.",
+      "source_url": "https://rpc.cfainstitute.org/research/financial-analysts-journal/2009/liquidity-and-the-post-earnings-announcement-drift",
+      "source_kind": "Tradability constraint",
+      "verification_scope": "Register reports a primary summary and abstract screen; not independently replicated in Stock-Movement."
+    },
+    {
+      "id": "R12",
+      "title": "Do Industries Explain Momentum?",
+      "authors": "Moskowitz, Grinblatt",
+      "year": 1999,
+      "family": "Industry momentum",
+      "horizons": [
+        "months"
+      ],
+      "evidence_stage": "published",
+      "finding": "Industry momentum explains a substantial part of stock momentum in the historical sample.",
+      "limitation": "This does not validate a fixed sector-cycle clock, an RRG quadrant strategy or a particular ETF allocation rule.",
+      "application": "Display stock strength beside its industry and the broader market; test industry-based baselines separately.",
+      "source_url": "https://onlinelibrary.wiley.com/doi/10.1111/0022-1082.00146",
+      "source_kind": "Predictive candidate",
+      "verification_scope": "Register reports a primary abstract screen. Stock-Movement's separate industry baseline is an adaptation, not a replication of this paper."
+    },
+    {
+      "id": "R13",
+      "title": "Bundled Earnings Guidance and Analysts' Forecast Revisions",
+      "authors": "Hsu, Wang",
+      "year": 2021,
+      "family": "Guidance and information timing",
+      "horizons": [
+        "weeks",
+        "months"
+      ],
+      "evidence_stage": "published",
+      "finding": "Analyst responses differ when companies release guidance together with earnings.",
+      "limitation": "Residual confounding is possible, and a market response does not establish tradable post-release alpha.",
+      "application": "Record actual results, guidance and analyst updates separately, then test their information timing.",
+      "source_url": "https://onlinelibrary.wiley.com/doi/10.1111/1911-3846.12686",
+      "source_kind": "Information context",
+      "verification_scope": "Register reports screening of the open article and relevant sections; not independently replicated in Stock-Movement."
+    },
+    {
+      "id": "R14",
+      "title": "… and the Cross-Section of Expected Returns",
+      "authors": "Harvey, Liu, Zhu",
+      "year": 2016,
+      "family": "Multiple testing",
+      "horizons": [
+        "intraday",
+        "weeks",
+        "months",
+        "years"
+      ],
+      "evidence_stage": "published",
+      "finding": "A large history of factor searches weakens casual reliance on conventional significance thresholds for new factors.",
+      "limitation": "The suggested stronger t-statistic threshold is not a universal certification rule.",
+      "application": "Register every experiment and account for multiple testing.",
+      "source_url": "https://people.duke.edu/~charvey/Research/Published_Papers/P118_and_the_cross.PDF",
+      "source_kind": "Validation method",
+      "verification_scope": "Register reports screening of the abstract and relevant sections; not independently replicated in Stock-Movement. Cross-horizon tags describe application of the methodology."
+    },
+    {
+      "id": "R15",
+      "title": "Replicating Anomalies",
+      "authors": "Hou, Xue, Zhang",
+      "year": 2020,
+      "family": "Replication and portfolio construction",
+      "horizons": [
+        "months",
+        "years"
+      ],
+      "evidence_stage": "published",
+      "finding": "Many anomalies fail significance tests under the authors' NYSE breakpoints and value-weighted portfolio construction.",
+      "limitation": "The conclusions depend on the replication design; final published counts differ from earlier working versions.",
+      "application": "Test sensitivity to liquidity restrictions and portfolio weighting.",
+      "source_url": "https://academic.oup.com/rfs/article/33/5/2019/5236964",
+      "source_kind": "Replication study",
+      "verification_scope": "Register reports screening of the final abstract and results, using the final 452-anomaly study rather than older counts. No Stock-Movement replication."
+    },
+    {
+      "id": "R16",
+      "title": "Open Source Cross-Sectional Asset Pricing",
+      "authors": "Chen, Zimmermann",
+      "year": 2022,
+      "family": "Open replication",
+      "horizons": [
+        "months",
+        "years"
+      ],
+      "evidence_stage": "published",
+      "finding": "Most originally clear predictors reproduce conventional significance under replication procedures resembling their original constructions.",
+      "limitation": "Historical reproducibility, robustness to a changed construction and current tradability after costs are distinct questions.",
+      "application": "Start replication work from published code and document every implementation change.",
+      "source_url": "https://doi.org/10.1561/104.00000112",
+      "source_kind": "Replication study",
+      "verification_scope": "Register reports screening of the abstract and authors' code-project documentation; not independently replicated in Stock-Movement."
+    },
+    {
+      "id": "R17",
+      "title": "Does Academic Research Destroy Stock Return Predictability?",
+      "authors": "McLean, Pontiff",
+      "year": 2016,
+      "family": "Post-publication decay",
+      "horizons": [
+        "months",
+        "years"
+      ],
+      "evidence_stage": "published",
+      "finding": "Average predictor returns fall outside the original sample and further after publication.",
+      "limitation": "Average decay across the studied predictors is not a mechanical haircut for every new strategy.",
+      "application": "Report post-publication and recent-period performance separately.",
+      "source_url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/jofi.12365",
+      "source_kind": "Replication study",
+      "verification_scope": "Register reports a primary abstract screen; not independently replicated in Stock-Movement."
+    },
+    {
+      "id": "R18",
+      "title": "The Probability of Backtest Overfitting",
+      "authors": "Bailey, Borwein, López de Prado, Zhu",
+      "year": 2017,
+      "family": "Model-selection risk",
+      "horizons": [
+        "intraday",
+        "weeks",
+        "months",
+        "years"
+      ],
+      "evidence_stage": "published",
+      "finding": "Choosing the strongest historical variant introduces selection risk that can be studied with overfitting diagnostics.",
+      "limitation": "These diagnostics supplement chronological evaluation, realistic costs and forward monitoring.",
+      "application": "Preserve the full search history and evaluate model-selection risk.",
+      "source_url": "https://escholarship.org/uc/item/4w1110bb",
+      "source_kind": "Validation method",
+      "verification_scope": "Register reports screening of the abstract and relevant methodology; not independently replicated in Stock-Movement. Cross-horizon tags describe application of the methodology."
+    },
+    {
+      "id": "R19",
+      "title": "Foundations of Technical Analysis: Computational Algorithms, Statistical Inference, and Empirical Implementation",
+      "authors": "Lo, Mamaysky, Wang",
+      "year": 2000,
+      "family": "Mechanical price patterns",
+      "horizons": [
+        "weeks",
+        "months"
+      ],
+      "evidence_stage": "published",
+      "finding": "Some algorithmically detected chart patterns change conditional return distributions in the historical U.S. sample.",
+      "limitation": "Informational content does not prove current net profitability; a turning point cannot be used before it becomes confirmable.",
+      "application": "Test mechanically defined patterns as challenger features with causal confirmation rules.",
+      "source_url": "https://doi.org/10.1111/0022-1082.00265",
+      "source_kind": "Predictive candidate",
+      "verification_scope": "Register reports screening of paper methods and results for the 1962–1996 U.S. sample; not independently replicated in Stock-Movement. Proposed horizon tags do not establish intraday applicability."
+    },
+    {
+      "id": "R20",
+      "title": "Intraday Patterns in the Cross-section of Stock Returns",
+      "authors": "Heston, Korajczyk, Sadka",
+      "year": 2010,
+      "family": "Intraday seasonality and reversal",
+      "horizons": [
+        "intraday"
+      ],
+      "evidence_stage": "published",
+      "finding": "Same-time-of-day continuation coexists with short reversal, while ask-to-bid execution produces negative returns across examined groups and times.",
+      "limitation": "Predictable return patterns alone do not justify profitable additional round trips.",
+      "application": "Evaluate the patterns for execution scheduling as well as possible forecasting.",
+      "source_url": "https://www.bauer.uh.edu/departments/finance/documents/Heston_Korajczyk_Sadka_paper_UH.pdf",
+      "source_kind": "Predictive candidate",
+      "verification_scope": "Register reports screening of methods and cost discussion; not independently replicated in Stock-Movement."
+    },
+    {
+      "id": "R21",
+      "title": "Market Intraday Momentum",
+      "authors": "Gao, Han, Li, Zhou",
+      "year": 2018,
+      "family": "Late-session market momentum",
+      "horizons": [
+        "intraday"
+      ],
+      "evidence_stage": "published",
+      "finding": "In the studied S&P 500 ETF sample, the previous-close-to-10:00 ET return predicts the final half-hour; the study reports out-of-sample evidence under its cost assumptions.",
+      "limitation": "The predictor includes the overnight return, and current viability requires replication using executable prices and costs.",
+      "application": "Build a precisely timed late-session benchmark with an explicit overnight component.",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S0304405X18301351",
+      "source_kind": "Predictive candidate",
+      "verification_scope": "Register reports screening of the abstract and available paper material; not independently replicated in Stock-Movement."
+    },
+    {
+      "id": "R22",
+      "title": "Hedging Demand and Market Intraday Momentum",
+      "authors": "Baltussen, Da, Lammers, Martens",
+      "year": 2021,
+      "family": "Intraday momentum and reversal",
+      "horizons": [
+        "intraday"
+      ],
+      "evidence_stage": "published",
+      "finding": "Across the studied futures, earlier-session returns relate to the final half-hour and to subsequent reversal.",
+      "limitation": "Main strategy results exclude costs, and the inferred hedging-demand mechanism is not an observation of dealer inventory.",
+      "application": "Compare opening-only and later-day predictors while accounting for trading costs.",
+      "source_url": "https://academicweb.nd.edu/~zda/intramom.pdf",
+      "source_kind": "Predictive candidate",
+      "verification_scope": "Register reports screening of methods, results and caveats in the published paper; not independently replicated in Stock-Movement."
+    },
+    {
+      "id": "R23",
+      "title": "The Price Impact of Order Book Events",
+      "authors": "Cont, Kukanov, Stoikov",
+      "year": 2014,
+      "family": "Order flow and price impact",
+      "horizons": [
+        "intraday"
+      ],
+      "evidence_stage": "published",
+      "finding": "Order-flow imbalance relates to contemporaneous short-interval price changes, with sensitivity varying with market depth.",
+      "limitation": "Using events from the same interval to explain its price move does not forecast the next interval.",
+      "application": "Use order-flow measures for execution diagnostics and separately test lagged forecasts.",
+      "source_url": "https://arxiv.org/abs/1011.6402",
+      "source_kind": "Explanatory model",
+      "verification_scope": "Register reports screening of the primary paper summary and methodology using author preprint and publication metadata; the catalog uses the 2014 publication identity. No Stock-Movement replication."
+    },
+    {
+      "id": "R24",
+      "title": "Queue Imbalance as a One-Tick-Ahead Price Predictor in a Limit Order Book",
+      "authors": "Gould, Bonart",
+      "year": 2016,
+      "family": "Order-book directional prediction",
+      "horizons": [
+        "intraday"
+      ],
+      "evidence_stage": "published",
+      "finding": "Queue imbalance predicts the direction of the next mid-price change, especially for large-tick stocks in the study.",
+      "limitation": "Random splitting and sampling need causal, chronological alternatives; directional accuracy does not establish profitable fills.",
+      "application": "Test queue imbalance with causal sampling, chronological holdouts and executable-fill evaluation.",
+      "source_url": "https://arxiv.org/abs/1512.03492",
+      "source_kind": "Predictive candidate",
+      "verification_scope": "Register reports screening of full-method sections in the 2015 author preprint and journal identity; the catalog uses the 2016 publication year. No Stock-Movement replication."
+    },
+    {
+      "id": "R25",
+      "title": "Price Pressures",
+      "authors": "Hendershott, Menkveld",
+      "year": 2014,
+      "family": "Inventory and temporary price pressure",
+      "horizons": [
+        "intraday",
+        "weeks"
+      ],
+      "evidence_stage": "published",
+      "finding": "Historical intermediary inventories and a structural model explain temporary price pressure.",
+      "limitation": "Proprietary inputs and future-informed Kalman smoothing prevent direct use as a live public signal.",
+      "application": "Motivate reversal tests and use causal filtering for any model adaptation.",
+      "source_url": "https://faculty.haas.berkeley.edu/hender/price_pressures.pdf",
+      "source_kind": "Explanatory model",
+      "verification_scope": "Register reports screening of relevant methods and results in the published paper; not independently replicated in Stock-Movement. Horizon tags describe possible adaptations, not validated holding periods."
+    },
+    {
+      "id": "R26",
+      "title": "Data-Snooping, Technical Trading Rule Performance, and the Bootstrap",
+      "authors": "Sullivan, Timmermann, White",
+      "year": 1999,
+      "family": "Technical-rule selection bias",
+      "horizons": [
+        "intraday",
+        "weeks",
+        "months",
+        "years"
+      ],
+      "evidence_stage": "published",
+      "finding": "A Reality Check applied to a large technical-rule family finds different evidence in early and later periods.",
+      "limitation": "The results are more nuanced than a blanket claim that all technical analysis fails.",
+      "application": "Evaluate the entire searched rule family rather than selecting its strongest historical member in isolation.",
+      "source_url": "https://doi.org/10.1111/0022-1082.00163",
+      "source_kind": "Validation method",
+      "verification_scope": "Register reports screening of relevant methodology and results; not independently replicated in Stock-Movement. Cross-horizon tags describe application of the methodology."
+    },
+    {
+      "id": "R27",
+      "title": "Technical Trading Revisited: False Discoveries, Persistence Tests, and Transaction Costs",
+      "authors": "Bajgrowicz, Scaillet",
+      "year": 2012,
+      "family": "Technical-rule persistence and costs",
+      "horizons": [
+        "intraday",
+        "weeks",
+        "months",
+        "years"
+      ],
+      "evidence_stage": "published",
+      "finding": "Selection timing, false discoveries and transaction costs undermine apparent profits in the studied technical-rule family.",
+      "limitation": "Apparent historical rule performance is insufficient without a subsequent evaluation period and realistic costs.",
+      "application": "Choose models using net development-period performance and preserve a genuinely subsequent evaluation period.",
+      "source_url": "https://archive-ouverte.unige.ch/unige:79889",
+      "source_kind": "Validation method",
+      "verification_scope": "Register reports screening of accepted-manuscript methodology and results; not independently replicated in Stock-Movement. Cross-horizon tags describe application of the methodology."
+    }
+  ]
+}

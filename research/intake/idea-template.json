@@ -1,0 +1,23 @@
+{
+  "id": null,
+  "received_at": null,
+  "submitted_by": null,
+  "original_submission_reference": null,
+  "original_text": null,
+  "interpretation": null,
+  "hypothesis": null,
+  "universe": null,
+  "horizon": null,
+  "trigger": null,
+  "expected_mechanism": null,
+  "baseline": null,
+  "disconfirming_result": null,
+  "source_links": [],
+  "related_ids": [],
+  "evidence_status": "unreviewed",
+  "test_status": "untested",
+  "data_status": "unknown",
+  "visibility": "private",
+  "publication_authorized": false,
+  "review_history": []
+}
