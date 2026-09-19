@@ -1,0 +1,235 @@
+{
+  "audit_type": "issuer_workbook_schema_and_coverage_only",
+  "retrieved_at_utc": "2026-09-19T04:53:51.664126+00:00",
+  "reader": {
+    "package": "openpyxl",
+    "version": "3.1.5",
+    "mode": "read_only=True,data_only=True"
+  },
+  "strategy_or_performance_computed": false,
+  "raw_files_committed": false,
+  "sources": [
+    {
+      "url": "https://www.ssga.com/library-content/products/fund-data/etfs/us/navhist-us-en-xlk.xlsx",
+      "filename": "xlk-nav-history.xlsx",
+      "http_status": 200,
+      "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "last_modified": "Fri, 18 Sep 2026 05:08:29 GMT",
+      "final_url": "https://www.ssga.com/library-content/products/fund-data/etfs/us/navhist-us-en-xlk.xlsx",
+      "bytes": 267390,
+      "sha256": "0de7c2f5c665a9e34686e61bab7156c5b25dad34abc494da1576fc5a3aad4de8",
+      "sheet_names": [
+        "navhist"
+      ],
+      "kind": "daily_nav_history",
+      "ticker": "XLK",
+      "header_range": "navhist!A4:D4",
+      "headers": [
+        "Date",
+        "NAV",
+        "Shares Outstanding",
+        "Total Net Assets"
+      ],
+      "data_range": "navhist!A5:D5742",
+      "data_rows": 5738,
+      "date_min": "2003-12-01",
+      "date_max": "2026-09-17",
+      "duplicate_dates": 0,
+      "date_order": "descending",
+      "weekend_dates": 0,
+      "nulls_by_column": {
+        "Date": 0,
+        "NAV": 0,
+        "Shares Outstanding": 0,
+        "Total Net Assets": 0
+      },
+      "nonfinite_numeric_values": 0,
+      "nonnumeric_values_in_numeric_columns": 1256,
+      "unexplained_date_gaps_not_tested": true,
+      "daily_market_prices_present": false,
+      "ohlc_present": false,
+      "distribution_events_present": false,
+      "total_return_series_present": false,
+      "split_adjustment_method_verified": false,
+      "limitations": [
+        "Coverage starts after fund inception; not suitable by itself for a 2000-start experiment.",
+        "NAV observations are not exchange execution prices.",
+        "No cash-distribution or noncash-distribution events are supplied in this table.",
+        "No exchange-calendar completeness audit performed; this count is observed rows, not certification of a complete session calendar.",
+        "Do not infer split adjustment or total-return adjustment from the NAV field name.",
+        "Shares Outstanding and Total Net Assets each contain 628 dash placeholders; NAV has no observed missing values."
+      ],
+      "missing_marker_counts_by_column": {
+        "NAV": 0,
+        "Shares Outstanding": 628,
+        "Total Net Assets": 628
+      },
+      "missing_marker_date_ranges": {
+        "Shares Outstanding": {
+          "min": "2003-12-01",
+          "max": "2006-05-30"
+        },
+        "Total Net Assets": {
+          "min": "2003-12-01",
+          "max": "2006-05-30"
+        }
+      }
+    },
+    {
+      "url": "https://www.ssga.com/library-content/products/fund-data/etfs/us/spdr-product-data-us-en.xlsx",
+      "filename": "spdr-product-data.xlsx",
+      "http_status": 200,
+      "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "last_modified": "Fri, 18 Sep 2026 18:31:33 GMT",
+      "final_url": "https://www.ssga.com/library-content/products/fund-data/etfs/us/spdr-product-data-us-en.xlsx",
+      "bytes": 94159,
+      "sha256": "a9b2c0a9d783938886fff36d0b7202d3c3b07a0fae7e2391b9364f7347c2d431",
+      "sheet_names": [
+        "Sheet1"
+      ],
+      "kind": "current_cross_sectional_product_snapshot",
+      "header_range": "Sheet1!A2:BJ3",
+      "observed_header_columns_with_content": 56,
+      "observed_row_extent": 255,
+      "product_rows": 180,
+      "as_of_date_min": "2026-09-17",
+      "as_of_date_max": "2026-09-17",
+      "unique_as_of_dates": [
+        "2026-09-17"
+      ],
+      "duplicate_tickers": {},
+      "key_headers": [
+        "As of** ",
+        "Ticker",
+        "Name",
+        "ISIN",
+        "CUSIP",
+        "Inception Date",
+        "Gross Expense Ratio",
+        "* Net Expense Ratio",
+        "Asset Class",
+        "Distribution Frequency",
+        "Primary Exchange",
+        "Primary Index",
+        "Primary Index Ticker",
+        "Bid/Ask",
+        "Closing Price",
+        "Day High",
+        "Day Low",
+        "Exchange Volume (shares)",
+        "Premium/Discount",
+        "30-Day Median Bid/Ask Spread",
+        "NAV",
+        "Shares Outstanding",
+        "Total Net Assets",
+        "Net Cash Amount",
+        "30 Day SEC Yield",
+        "30 Day SEC Yield (Unsubsidized)",
+        "Fund Dividend Yield",
+        "Current Indicative Fund Yield",
+        "Index Dividend Yield",
+        "Taxable Equivalent Yield",
+        "Total Returns as of Date"
+      ],
+      "sector_etf_rows": {
+        "XLC": {
+          "row": 9,
+          "as_of": "2026-09-17",
+          "inception_date": "2018-06-18"
+        },
+        "XLY": {
+          "row": 11,
+          "as_of": "2026-09-17",
+          "inception_date": "1998-12-16"
+        },
+        "XLP": {
+          "row": 13,
+          "as_of": "2026-09-17",
+          "inception_date": "1998-12-16"
+        },
+        "XLE": {
+          "row": 17,
+          "as_of": "2026-09-17",
+          "inception_date": "1998-12-16"
+        },
+        "XLF": {
+          "row": 19,
+          "as_of": "2026-09-17",
+          "inception_date": "1998-12-16"
+        },
+        "XLV": {
+          "row": 26,
+          "as_of": "2026-09-17",
+          "inception_date": "1998-12-16"
+        },
+        "XLI": {
+          "row": 31,
+          "as_of": "2026-09-17",
+          "inception_date": "1998-12-16"
+        },
+        "XLB": {
+          "row": 34,
+          "as_of": "2026-09-17",
+          "inception_date": "1998-12-16"
+        },
+        "XLRE": {
+          "row": 57,
+          "as_of": "2026-09-17",
+          "inception_date": "2015-10-07"
+        },
+        "XLK": {
+          "row": 174,
+          "as_of": "2026-09-17",
+          "inception_date": "1998-12-16"
+        },
+        "XLU": {
+          "row": 179,
+          "as_of": "2026-09-17",
+          "inception_date": "1998-12-16"
+        }
+      },
+      "sector_etf_blank_or_dash_counts": {
+        "As of**": 0,
+        "Ticker": 0,
+        "Inception Date": 0,
+        "Bid/Ask": 0,
+        "Closing Price": 0,
+        "Day High": 0,
+        "Day Low": 0,
+        "Exchange Volume (shares)": 0,
+        "Premium/Discount": 0,
+        "30-Day Median Bid/Ask Spread": 0,
+        "NAV": 0,
+        "Shares Outstanding": 0,
+        "Total Net Assets": 0
+      },
+      "historical_daily_market_prices_present": false,
+      "current_close_high_low_volume_present": true,
+      "current_open_price_present": false,
+      "distribution_events_present": false,
+      "fund_distribution_frequency_and_yield_present": true,
+      "historical_return_series_present": false,
+      "limitations": [
+        "One product row per ticker is a snapshot, not a daily historical market-price dataset.",
+        "Market fields are currency/percentage/volume strings, requiring explicit parsing.",
+        "Fund-level cumulative and annualized return summaries do not provide period-by-period historical returns.",
+        "Distribution frequency/yield fields are not a dated distribution-event ledger.",
+        "All observed pricing as-of dates are September 17, 2026; return-summary timestamps are separate and earlier. Do not assume all fields share one timestamp."
+      ],
+      "total_return_summary_as_of_dates": [
+        "2026-08-31"
+      ],
+      "unparsed_or_missing_return_summary_as_of_rows": 2
+    }
+  ],
+  "acceptance_decision": {
+    "sufficient_for_executable_sector_etf_momentum_backtest": false,
+    "missing": [
+      "Historical market prices with execution-field definitions and adequate pre-evaluation warm-up.",
+      "Dated ordinary and noncash distribution events, splits, and documented adjustment policy.",
+      "Independent total-return and corporate-action reconciliation.",
+      "Exchange-session and complete-universe coverage audit."
+    ],
+    "raw_download_storage": "Ignored work/etf-source-audit only; not part of this metadata artifact."
+  }
+}

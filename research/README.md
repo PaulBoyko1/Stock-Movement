@@ -16,6 +16,10 @@ The [offline interactive concept](ui/index.html) now explores Overview, Evidence
 
 ## Start here
 
+September 18 follow-up: the UI's Evidence page now includes a searchable [27-paper catalog](evidence-catalog.json), alongside the historical company reports. Findings, caveats, proposed applications and original screening limits remain separate. The catalog inherits the existing literature screen; it is not a new replication exercise.
+
+The [ETF data-readiness review](experiments/E04-P3-data-readiness.md) defines the next candidate test and documents an actual [issuer workbook audit](etf-source-audit.json). The inspected NAV and product-snapshot downloads do not provide the full market-price and corporate-action history required. No ETF strategy returns have been generated.
+
 - [Evidence register](evidence-register.md): 27 papers, findings, limitations, and possible applications.
 - [Earnings case studies](earnings-case-studies.md): Microsoft, Walmart, JPMorgan Chase, and Caterpillar.
 - [Experiment plan](experiment-plan.md): hypotheses, data requirements, comparison models, and promotion criteria.

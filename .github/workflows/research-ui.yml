@@ -4,7 +4,9 @@ on:
     branches: [codex/research-foundation, main]
     paths:
       - 'research/ui/index.html'
-      - 'research/ui/verify_ui.py'
+      - 'research/ui/*.py'
+      - 'research/evidence-catalog.json'
+      - 'research/evidence-register.md'
       - '.github/workflows/research-ui.yml'
   workflow_dispatch:
 permissions:
@@ -25,7 +27,10 @@ jobs:
           python -m pip install playwright==1.55.0
           python -m playwright install --with-deps chromium
       - name: Check interactions and responsive layout
-        run: python research/ui/verify_ui.py
+        run: |
+          python research/ui/build_catalog.py --check
+          python -m unittest discover -s research/ui -p 'test_*.py' -v
+          python research/ui/verify_ui.py
       - name: Retain screenshots and checks
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4

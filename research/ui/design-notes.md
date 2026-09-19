@@ -94,6 +94,18 @@ Suggested QA: navigate all five views; check only one is visible; exercise all h
 
 ## Next implementation questions
 
+### Literature library follow-up
+
+Evidence now has two panels: Company reports and Research papers. The paper panel searches the existing R01–R27 register by title, author, finding, limitation and proposed test. Application and family filters intersect; an empty result hides the previous paper rather than leaving a stale claim visible. Selecting a paper changes its finding, caveat, test idea and primary-source link together. Publication status remains distinct from internal validation. The advanced view adds the source-screening scope and proposed horizon tags.
+
+The canonical source is `research/evidence-catalog.json`. Run `python research/ui/build_catalog.py` after changing it. The build embeds a safe JSON copy inside `index.html`, preserving the one-file offline experience; CI rejects stale copies and sources absent from their corresponding register entries. This is a curated project catalog, not an importer for user files.
+
+The Lab also shows E04-P3 as **Data validation incomplete**. Its linked audit records the limitations of two inspected issuer downloads and the XLF/XLRE corporate-action issue. The UI does not present candidate ETF rules as a completed backtest.
+
+Additional selectors: `#evidence-tab-companies`, `#evidence-tab-papers`, `#paper-search`, `#paper-horizon`, `#paper-family`, `#paper-reset`, `#paper-count`, `[data-paper-id]`, `#paper-detail`, `#paper-empty`, and `#etf-readiness`. Paper filters are independent of the global horizon lens.
+
+### Remaining product questions
+
 1. Which sourced observations deserve reusable cards, and which need a sector-specific detail panel?
 2. What validation threshold allows a research result to appear beside a current instrument?
 3. Can every forecast carry its horizon, benchmark, data cutoff, calibration and known limitations without overwhelming the simple view?
