@@ -5,6 +5,11 @@ on:
     paths:
       - 'research/ui/index.html'
       - 'research/ui/*.py'
+      - 'research/ui/*.js'
+      - 'research/ui/*.cjs'
+      - 'research/ui/*.css'
+      - 'research/ui/workbench-view.html'
+      - 'research/ui/backtest-data.json'
       - 'research/evidence-catalog.json'
       - 'research/evidence-register.md'
       - '.github/workflows/research-ui.yml'
@@ -29,7 +34,10 @@ jobs:
       - name: Check interactions and responsive layout
         run: |
           python research/ui/build_catalog.py --check
+          python research/ui/build_workbench.py --check
           python -m unittest discover -s research/ui -p 'test_*.py' -v
+          node --test research/ui/test_backtest_engine.cjs
+          python research/ui/verify_backtest_baseline.py
           python research/ui/verify_ui.py
       - name: Retain screenshots and checks
         if: always()
