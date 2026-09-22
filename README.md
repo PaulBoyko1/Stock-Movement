@@ -18,7 +18,7 @@ Research and decision support for liquid U.S. stocks and ETFs, with a simple int
 
 The industry baseline and six-factor attribution cover 312 months (2000–2025). At the primary assumed 10 bp allocation cost, factor-adjusted annual arithmetic alpha is approximately 0.29%, with a 95% interval of −2.67% to +3.24%. This does not establish positive alpha or an executable trading edge. The inputs are reconstructed industry research portfolios, not a point-in-time liquid-stock or tradable-ETF universe.
 
-Validation: [33 statistical tests](https://github.com/PaulBoyko1/Stock-Movement/actions/runs/35422785132) passed for the unchanged frozen research. The [workbench check run](https://github.com/PaulBoyko1/Stock-Movement/actions/runs/35543190538) passed 119 browser checks, 10 calculation tests, 4 catalog tests, asset synchronization, and JS/Python comparison of all 312 monthly records at three cost levels.
+Validation: [33 statistical tests](https://github.com/PaulBoyko1/Stock-Movement/actions/runs/35422785132) passed for the unchanged frozen research. The [workbench check run](https://github.com/PaulBoyko1/Stock-Movement/actions/runs/35791314075) passed 122 browser checks, 10 calculation tests, 4 catalog tests, asset synchronization, and JS/Python comparison of all 312 monthly records at three cost levels.
 
 The UI is an offline research prototype. Forecast models, live market data, durable intake storage and automated execution remain future work. Raw future submissions default to private storage; this repository is public.
 

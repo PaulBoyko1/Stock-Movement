@@ -1,7 +1,7 @@
 {
   "status": "passed",
-  "code_commit": "5cc224dee1c9d5b638f8d9c60d5eddfae9320372",
-  "html_sha256": "bb32a751a2ee70c3371e6306f4634c74bbcc7c4ba9e34db405b33f6358a7cd41",
+  "code_commit": "182e36a8a9d8a3920a676df54bc668864524a1ec",
+  "html_sha256": "f11605809835d93edf77bc21b66e9d65ea44b2ee6a964fbbbf454c1da7cd6508",
   "catalog_sha256": "0cdb523ed1b2c5b4e1451585d768c71743475bb10394fdd1883d79433c9140c2",
   "checks": [
     "skip link targets main content",
@@ -54,11 +54,14 @@
     "invalid input is rejected without silent correction: top-k",
     "invalid input is rejected without silent correction: cost-bps",
     "date, skip and cost inputs apply to the displayed run",
+    "failed run clears applied settings and month announcement",
     "invalid warmup clears result and prevents export",
     "restore baseline reproduces original curve",
     "holding all industries matches comparison in UI",
     "advanced capital and rebalance settings apply",
+    "native form controls follow dark theme",
     "run button contrast >= 4.5:1 in dark",
+    "native form controls follow light theme",
     "run button contrast >= 4.5:1 in light",
     "inbox renders literal text",
     "inbox does not execute input",
@@ -124,7 +127,7 @@
     "no JavaScript errors",
     "no external network requests"
   ],
-  "count": 119,
+  "count": 122,
   "page_errors": [],
   "external_requests": [],
   "browser": "140.0.7339.16",
@@ -134,8 +137,8 @@
     768,
     1440
   ],
-  "run": "https://github.com/PaulBoyko1/Stock-Movement/actions/runs/35543190538",
-  "job_id": 106164439273,
-  "artifact_id": 10615607726,
-  "artifact_expires_at": "2026-10-20T22:58:03Z"
+  "run": "https://github.com/PaulBoyko1/Stock-Movement/actions/runs/35791314075",
+  "job_id": 106960211982,
+  "artifact_id": 10722266165,
+  "artifact_expires_at": "2026-10-22T22:15:52Z"
 }

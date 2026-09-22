@@ -1,54 +1,54 @@
 {
   "origin": "Local Chromium screenshots, visually reviewed; same HTML SHA256 as successful CI",
-  "html_sha256": "bb32a751a2ee70c3371e6306f4634c74bbcc7c4ba9e34db405b33f6358a7cd41",
-  "code_commit": "5cc224dee1c9d5b638f8d9c60d5eddfae9320372",
+  "html_sha256": "f11605809835d93edf77bc21b66e9d65ea44b2ee6a964fbbbf454c1da7cd6508",
+  "code_commit": "182e36a8a9d8a3920a676df54bc668864524a1ec",
   "browser": "148.0.7778.96",
   "playwright": "1.60.0",
   "screenshots": [
     {
       "file": "previews/backtest-dark.jpg",
-      "sha256": "aba97b28347c857c9e0278d33236279b85b3fd539d01fe0be959348bbeb076b6",
-      "capture_file_mtime_utc": "2026-09-20T22:59:22.290174+00:00"
+      "sha256": "9d8afc30c67335dbdd21008498936aa47379dcae5ea902e2969c6d227d90340d",
+      "capture_file_mtime_utc": "2026-09-22T22:16:48.294513+00:00"
     },
     {
       "file": "previews/backtest-desktop.jpg",
-      "sha256": "8783ebfa88d07288f02bb17073ac76b8dc06c09cfbd5e6981a8106bb02bde301",
-      "capture_file_mtime_utc": "2026-09-20T22:59:22.095673+00:00"
+      "sha256": "1ce74ef93502ff7011cde37378c7e8839f2d525f227c0901aec6d472e4f4076c",
+      "capture_file_mtime_utc": "2026-09-22T22:16:48.074228+00:00"
     },
     {
       "file": "previews/backtest-mobile.jpg",
-      "sha256": "6eea77ef201758680acf2bb5aad0ccef722c0a726bfc6670786859699b520bae",
-      "capture_file_mtime_utc": "2026-09-20T22:59:22.442345+00:00"
+      "sha256": "e4944e828136d9445c9ee26f295ad1af6b92b01213187c96ac6649c51bcc1ecb",
+      "capture_file_mtime_utc": "2026-09-22T22:16:48.468311+00:00"
     },
     {
       "file": "previews/evidence-mobile.jpg",
       "sha256": "08d4986f5007a83e833073384300133147eb516dfe9901807954059b197ef471",
-      "capture_file_mtime_utc": "2026-09-20T22:59:22.815522+00:00"
+      "capture_file_mtime_utc": "2026-09-22T22:16:48.843402+00:00"
     },
     {
       "file": "previews/lab-dark.jpg",
       "sha256": "5a9729005943bc486ffe206f02b811395b0a6b57a341b84a64559c21cfa6cecd",
-      "capture_file_mtime_utc": "2026-09-20T22:59:21.865211+00:00"
+      "capture_file_mtime_utc": "2026-09-22T22:16:47.810191+00:00"
     },
     {
       "file": "previews/overview-desktop.jpg",
       "sha256": "a2203db86ab987aef1e44805396131f80bfd9a77d069e0fe2aee16dffb913e9b",
-      "capture_file_mtime_utc": "2026-09-20T22:59:21.030361+00:00"
+      "capture_file_mtime_utc": "2026-09-22T22:16:46.906320+00:00"
     },
     {
       "file": "previews/papers-desktop.jpg",
       "sha256": "2bfd9895189ec9f029b493a458b1d7090696eb867e431d8ab3ad0412683ae5bb",
-      "capture_file_mtime_utc": "2026-09-20T22:59:21.474352+00:00"
+      "capture_file_mtime_utc": "2026-09-22T22:16:47.366255+00:00"
     },
     {
       "file": "previews/papers-mobile.jpg",
       "sha256": "68a140724a7e3703c6df572024bd4681dd34dc7e49c14d85a2e08d49ffc757a3",
-      "capture_file_mtime_utc": "2026-09-20T22:59:22.933928+00:00"
+      "capture_file_mtime_utc": "2026-09-22T22:16:48.974358+00:00"
     },
     {
       "file": "previews/rotation-desktop.jpg",
       "sha256": "42789afd23ba7cbb7d0ba0fa8e686745ed606b858e00ff19c975a85a763dbe71",
-      "capture_file_mtime_utc": "2026-09-20T22:59:21.659567+00:00"
+      "capture_file_mtime_utc": "2026-09-22T22:16:47.571311+00:00"
     }
   ]
 }

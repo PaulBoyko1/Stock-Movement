@@ -34,7 +34,7 @@ For a local server, run `python -m http.server 8766 --bind 127.0.0.1 --directory
 
 ## Checks performed
 
-The [successful browser run](https://github.com/PaulBoyko1/Stock-Movement/actions/runs/35543190538) used Chromium 140.0.7339.16 and Playwright 1.55.0 on code `5cc224dee1c9d5b638f8d9c60d5eddfae9320372`. Its [machine-readable check record](checks.json) contains 119 named checks, with additional browser assertions for content and control states. Four catalog tests check provenance and safe embedding. Ten calculation tests exercise timing, ties, portfolio drift, costs, metrics and invalid inputs. An independent JS/Python check compares all 312 monthly records and aggregate metrics at 0/10/25 bp to the frozen E04-P1 runner and committed results.
+The [successful browser run](https://github.com/PaulBoyko1/Stock-Movement/actions/runs/35791314075) used Chromium 140.0.7339.16 and Playwright 1.55.0 on code `182e36a8a9d8a3920a676df54bc668864524a1ec`. Its [machine-readable check record](checks.json) contains 122 named checks, with additional browser assertions for content and control states. Four catalog tests check provenance and safe embedding. Ten calculation tests exercise timing, ties, portfolio drift, costs, metrics and invalid inputs. An independent JS/Python check compares all 312 monthly records and aggregate metrics at 0/10/25 bp to the frozen E04-P1 runner and committed results.
 
 - Navigation, keyboard focus and skip link; all four horizons; simple/advanced switching; both themes.
 - All four company fixtures/source links and sector selections.
@@ -46,7 +46,7 @@ The [successful browser run](https://github.com/PaulBoyko1/Stock-Movement/action
 
 The current interface also passed a local Chromium 148.0.7778.96 / Playwright 1.60.0 run. Retained screenshots were captured locally from the exact HTML hash tested in CI; [the manifest](preview-manifest.json) records their hashes and capture environment. Visual review corrected mobile source wrapping, chart labels, field sizing and button contrast. The run button exceeds 4.5:1 text contrast in both themes. Eight earlier text/status pairs are recorded separately ([ratios](contrast-checks.json)); this is not a complete accessibility audit. Other browser engines, real devices and assistive technologies have not been tested.
 
-Screenshots in this folder are retained with the repository. The Actions artifact (ID 10615607726) expires 2026-10-20T22:58:03Z.
+Screenshots in this folder are retained with the repository. The Actions artifact (ID 10722266165) expires 2026-10-22T22:15:52Z.
 
 To rerun locally:
 
