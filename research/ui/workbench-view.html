@@ -1,0 +1,131 @@
+<section id="view-backtest" class="view backtest-workbench" aria-labelledby="backtest-title" tabindex="-1" hidden>
+    <header class="backtest-header">
+      <div>
+        <p class="backtest-eyebrow">Research lab · monthly data</p>
+        <h2 id="backtest-title">Industry momentum backtest</h2>
+        <p class="backtest-lede">Run a transparent allocation test on real monthly, value-weighted industry portfolio total returns.</p>
+      </div>
+      <span class="backtest-badge">Historical proxy</span>
+    </header>
+
+    <section class="backtest-caveat" aria-label="Data boundary">
+      <strong>Scope</strong>
+      <span>This workbench uses monthly industry portfolios. It does not use stock prices, ETF prices, or intraday observations, and a historical result is not a live signal.</span>
+    </section>
+
+    <section class="backtest-card backtest-controls" aria-labelledby="backtest-controls-title">
+      <div class="backtest-card-heading">
+        <div>
+        <h2 id="backtest-controls-title">Set up your test</h2>
+          <p>Change the parameters, then run explicitly. Editing a control marks the current result as stale.</p>
+        </div>
+        <span id="backtest-data-status" class="backtest-status-chip">Waiting for data</span>
+      </div>
+      <form id="backtest-form" class="backtest-form" novalidate>
+        <div class="backtest-field">
+          <label for="backtest-start">Start month</label>
+          <input id="backtest-start" name="start" type="month" required>
+        </div>
+        <div class="backtest-field">
+          <label for="backtest-end">End month</label>
+          <input id="backtest-end" name="end" type="month" required>
+        </div>
+        <div class="backtest-field">
+          <label for="backtest-lookback">Formation months</label>
+          <input id="backtest-lookback" name="lookback" required type="number" min="1" max="60" step="1" value="11" inputmode="numeric">
+          <small>Monthly observations used to rank industries.</small>
+        </div>
+        <div class="backtest-field">
+          <label for="backtest-skip">Skipped recent months</label>
+          <input id="backtest-skip" name="skip" required type="number" min="0" max="12" step="1" value="1" inputmode="numeric">
+          <small>Months between the signal window and holding month.</small>
+        </div>
+        <div class="backtest-field">
+          <label for="backtest-top-k">Top industries</label>
+          <input id="backtest-top-k" name="topK" required type="number" min="1" max="12" step="1" value="3" inputmode="numeric">
+        </div>
+        <div class="backtest-field">
+          <label for="backtest-cost-bps">Cost (basis points)</label>
+          <input id="backtest-cost-bps" name="costBps" required type="number" min="0" max="100" step="any" value="10" inputmode="numeric">
+          <small>10 bp = $1 per $1,000 traded. Includes entry and exit; proportional cost approximation.</small>
+        </div>
+        <div class="backtest-actions">
+          <button id="backtest-run" class="backtest-button" type="submit">Run backtest</button>
+          <button id="backtest-baseline" class="backtest-button backtest-button-secondary" type="button">Restore baseline</button>
+          <button id="backtest-export" class="backtest-button backtest-button-secondary" type="button" disabled>Export result JSON</button>
+        </div>
+      </form>
+      <details class="backtest-advanced-controls" data-advanced hidden>
+        <summary>Advanced controls</summary>
+        <div class="backtest-form backtest-form-advanced">
+          <div class="backtest-field">
+            <label for="backtest-capital">Initial capital</label>
+            <input id="backtest-capital" name="initialCapital" required type="number" min="0.01" max="1000000000000" step="any" value="10000" inputmode="decimal">
+          </div>
+          <div class="backtest-field">
+            <label for="backtest-frequency">Rebalance frequency</label>
+            <select id="backtest-frequency" name="rebalanceEvery">
+              <option value="1">Every month</option>
+              <option value="3">Every 3 months</option>
+            </select>
+          </div>
+        </div>
+      </details>
+      <p id="backtest-status" class="backtest-status" role="status" aria-live="polite">Load the embedded monthly industry dataset to begin.</p>
+      <p id="backtest-error" class="backtest-error" role="alert" hidden></p>
+      <details class="backtest-advanced" data-advanced hidden>
+        <summary>Advanced interpretation</summary>
+        <p>Momentum ranks each holding month from the supplied monthly total-return observations. Cost is a proportional haircut on allocation change under the engine's frozen convention. The comparison portfolio is equally weighted across the same industry universe.</p>
+      </details>
+    </section>
+
+    <section id="backtest-results" class="backtest-results" aria-live="polite" data-stale="true">
+      <div class="backtest-result-heading">
+        <div>
+          <p class="backtest-eyebrow">Run output</p>
+          <h2>Performance and holdings</h2>
+          <p id="backtest-applied" class="backtest-applied">No run applied yet.</p>
+        </div>
+        <span id="backtest-result-state" class="backtest-badge backtest-badge-muted">No run yet</span>
+      </div>
+
+      <div id="backtest-metrics" class="backtest-metrics" aria-label="Backtest metrics">
+        <div class="backtest-metric"><span>CAGR</span><strong data-metric="strategy.cagr">—</strong><small>Strategy</small></div>
+        <div class="backtest-metric"><span>Annual volatility</span><strong data-metric="strategy.volatility">—</strong><small>Strategy</small></div>
+        <div class="backtest-metric"><span>Month-end drawdown</span><strong data-metric="strategy.maxDrawdown">—</strong><small>Strategy</small></div>
+        <div class="backtest-metric"><span>Final wealth</span><strong data-metric="strategy.finalWealth">—</strong><small>Strategy</small></div>
+        <div class="backtest-metric"><span>Traded per year</span><strong data-metric="strategy.turnover">—</strong><small>Strategy · annualized</small></div>
+        <div class="backtest-metric backtest-metric-muted"><span>CAGR</span><strong data-metric="benchmark.cagr">—</strong><small>Benchmark</small></div>
+        <div class="backtest-metric backtest-metric-muted"><span>Annual volatility</span><strong data-metric="benchmark.volatility">—</strong><small>Benchmark</small></div>
+        <div class="backtest-metric backtest-metric-muted"><span>Month-end drawdown</span><strong data-metric="benchmark.maxDrawdown">—</strong><small>Benchmark</small></div>
+        <div class="backtest-metric backtest-metric-muted"><span>Final wealth</span><strong data-metric="benchmark.finalWealth">—</strong><small>Benchmark</small></div>
+        <div class="backtest-metric backtest-metric-muted"><span>Traded per year</span><strong data-metric="benchmark.turnover">—</strong><small>Benchmark · annualized</small></div>
+      </div>
+
+      <div class="backtest-chart-grid">
+        <article class="backtest-card backtest-chart-card">
+          <div class="backtest-card-heading"><div><h3>Portfolio value (USD)</h3><p>Initial capital, followed by month-end values after costs. Benchmark: equal weight across all 12 industries.</p></div><span class="backtest-legend"><i class="strategy-key"></i> Strategy <i class="benchmark-key"></i> Benchmark</span></div>
+          <svg id="backtest-wealth-chart" class="backtest-chart" role="img" aria-label="Wealth chart"></svg>
+        </article>
+        <article class="backtest-card backtest-chart-card">
+          <div class="backtest-card-heading"><div><h3>Month-end drawdown</h3><p>Distance from each series' prior high water mark.</p></div><span class="backtest-legend"><i class="strategy-key"></i> Strategy <i class="benchmark-key"></i> Benchmark</span></div>
+          <svg id="backtest-drawdown-chart" class="backtest-chart" role="img" aria-label="Drawdown chart"></svg>
+        </article>
+      </div>
+
+      <article class="backtest-card backtest-observation-card">
+        <div class="backtest-card-heading"><div><h3>Inspect one month</h3><p id="backtest-observation-count">Run a backtest to enable observation selection.</p></div><label class="backtest-observation-range" for="backtest-observation">Observation <input id="backtest-observation" type="range" min="0" max="0" value="0" step="1" disabled></label></div>
+        <div id="backtest-observation-details" class="backtest-observation-details"><p>No returned observations yet.</p></div>
+      </article>
+
+      <article class="backtest-card backtest-history-card">
+        <div class="backtest-card-heading"><div><h3>Session run history</h3><p>Successful runs remain visible only in this page session, so parameter changes stay auditable. Choosing the best historical run can overfit; keep track of every completed test.</p></div><span id="backtest-run-count" class="backtest-status-chip">0 runs completed</span></div>
+        <ol id="backtest-history" class="backtest-history"><li>No runs yet.</li></ol>
+      </article>
+    </section>
+
+    <footer class="backtest-footer">
+      <p id="backtest-source"><strong>Source:</strong> Kenneth French Data Library, monthly value-weighted industry portfolio total returns. The dataset title, source link and fingerprint appear here when available.</p>
+      <p id="backtest-caveat">Historical reconstructed industry portfolios do not establish investability, execution quality, future performance, or a recommendation.</p>
+    </footer>
+</section>
