@@ -197,6 +197,9 @@ with sync_playwright() as p:
     expect(page.locator("#backtest-error")).to_contain_text("Insufficient history")
     expect(page.locator("#backtest-export")).to_be_disabled()
     expect(page.locator('[data-metric="strategy.cagr"]')).to_have_text("—")
+    check("failed run clears applied settings and month announcement",
+          page.locator("#backtest-applied").inner_text() == "No successful result is displayed."
+          and page.locator("#backtest-observation").get_attribute("aria-valuetext") is None)
     check("invalid warmup clears result and prevents export", page.locator("#backtest-wealth-chart path").count() == 0)
     page.locator("#backtest-baseline").click()
     expect(page.locator("#backtest-lookback")).to_have_value("11")
@@ -225,6 +228,7 @@ with sync_playwright() as p:
     page.locator("#backtest-run").click()
     for theme in ["dark", "light"]:
         page.locator("#theme-toggle").click()
+        check("native form controls follow " + theme + " theme", page.locator("#backtest-start").evaluate("el=>getComputedStyle(el).colorScheme") == theme)
         colors = page.locator("#backtest-run").evaluate("el=>{let s=getComputedStyle(el);return [s.color,s.backgroundColor].map(c=>c.match(/[0-9.]+/g).slice(0,3).map(Number));}")
         def luminance(rgb):
             scaled = [v / 255 for v in rgb]
@@ -234,6 +238,7 @@ with sync_playwright() as p:
         check("run button contrast >= 4.5:1 in " + theme, (b + .05) / (a + .05) >= 4.5)
 
     page.locator("#nav-inbox").click()
+    expect(page.locator("#intake-delivery-note")).to_contain_text("Codex task conversation")
     page.locator("#idea-preview-button").click()
     expect(page.locator("#idea-status")).to_contain_text("Enter a note")
     payload = '<img src=x onerror="window.__injected=true"><script>window.__injected=true</script>'

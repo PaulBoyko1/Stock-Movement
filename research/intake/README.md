@@ -2,6 +2,8 @@
 
 Paste rough notes, upload files, or share links in the task whenever ready. Organization is optional. If known, the most useful extras are the source, approximate date, market/horizon, and what you think the material demonstrates.
 
+For a large collection, send manageable batches and optionally label them "Batch 1", "Batch 2", and so on. Send originals when available; no cleanup is required. Use this task conversation for delivery. The browser's Idea Inbox is a temporary preview and clears on reload; it does not save or deliver submissions.
+
 Stock-Movement should preserve the original submission and then add an interpretation, evidence links, and a proposed next test. It should accept spreadsheets, CSV exports, PDFs, earnings notes, screenshots, chart setups and unfinished hypotheses.
 
 ## What happens next

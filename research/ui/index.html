@@ -140,6 +140,8 @@
 .backtest-workbench .backtest-button { color: var(--backtest-panel); }
 .backtest-workbench .backtest-button-secondary { color: var(--backtest-text); }
 .backtest-field { align-content: start; }
+.backtest-workbench { color-scheme: light; }
+[data-theme="dark"] .backtest-workbench { color-scheme: dark; }
 .backtest-form { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 @media (max-width: 700px) { .backtest-form { grid-template-columns: minmax(0, 1fr); } }
 /* END BACKTEST CSS */
@@ -455,6 +457,7 @@
 <!-- END BACKTEST VIEW -->
 <section id="view-inbox" class="view" aria-label="Idea inbox" tabindex="-1" hidden>
 <div class="view-head"><div><h2>Messy ideas welcome.</h2><p>Try how a raw note could become a research question.</p></div><span class="badge blue">MEMORY ONLY</span></div>
+<p id="intake-delivery-note" class="context-note"><strong>Ready to share your collection?</strong> Send files, links and notes in the Codex task conversation. This page only previews notes and clears them on reload.</p>
 <div class="two-col">
 <article class="card">
 <label for="idea-input" class="form-label">Your idea, observation or counterexample</label>
@@ -1249,6 +1252,9 @@ window.addEventListener("hashchange",()=>{if(Object.hasOwn(labels,location.hash.
     };
   }
   function clearOutput() {
+    text($("backtest-applied"), "No successful result is displayed.");
+    $("backtest-observation").value = "0";
+    $("backtest-observation").removeAttribute("aria-valuetext");
     ["backtest-wealth-chart", "backtest-drawdown-chart"].forEach(function (id) { var node = $(id); while (node && node.firstChild) node.removeChild(node.firstChild); });
     ["strategy.cagr", "strategy.volatility", "strategy.maxDrawdown", "strategy.finalWealth", "strategy.turnover", "benchmark.cagr", "benchmark.volatility", "benchmark.maxDrawdown", "benchmark.finalWealth", "benchmark.turnover"].forEach(function (key) { var node = document.querySelector('[data-metric="' + key + '"]'); text(node, "—"); });
     $("backtest-observation").disabled = true; $("backtest-observation").max = "0"; text($("backtest-observation-details"), "No returned observations yet."); text($("backtest-observation-count"), "Run a backtest to enable observation selection."); $("backtest-export").disabled = true;

@@ -65,6 +65,9 @@
     };
   }
   function clearOutput() {
+    text($("backtest-applied"), "No successful result is displayed.");
+    $("backtest-observation").value = "0";
+    $("backtest-observation").removeAttribute("aria-valuetext");
     ["backtest-wealth-chart", "backtest-drawdown-chart"].forEach(function (id) { var node = $(id); while (node && node.firstChild) node.removeChild(node.firstChild); });
     ["strategy.cagr", "strategy.volatility", "strategy.maxDrawdown", "strategy.finalWealth", "strategy.turnover", "benchmark.cagr", "benchmark.volatility", "benchmark.maxDrawdown", "benchmark.finalWealth", "benchmark.turnover"].forEach(function (key) { var node = document.querySelector('[data-metric="' + key + '"]'); text(node, "—"); });
     $("backtest-observation").disabled = true; $("backtest-observation").max = "0"; text($("backtest-observation-details"), "No returned observations yet."); text($("backtest-observation-count"), "Run a backtest to enable observation selection."); $("backtest-export").disabled = true;
