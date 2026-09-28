@@ -10,7 +10,7 @@ Separately fetch the official Kenneth French 49-industry daily value-weighted to
 
 ## Predeclared panels
 - industry49: all 49 research portfolios, evaluation 2000-01-01 through 2025-12-31, 1994 onward warmup.
-- sectors9: XLB XLE XLF XLI XLK XLP XLU XLV XLY, same evaluation dates.
+- sectors9: XLB XLE XLF XLI XLK XLP XLU XLV XLY, evaluation 2000-03-01 through 2025-12-31. The later start provides 252+21 sessions of actual post-inception warmup for every grid member.
 - broad7: SPY QQQ IWM DIA MDY RSP VTI, evaluation 2005-01-01 through 2025-12-31.
 Remaining ETFs are collected and quality-audited for later independent specifications; they do not enter a data-dependent best-universe search.
 Require complete evaluation and warmup observations against the dated French factor calendar (from 1994); fail the affected panel if dates/values are missing. No performance-driven substitutions.
