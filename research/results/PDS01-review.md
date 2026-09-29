@@ -18,7 +18,7 @@ No panel passed the exploratory search-adjusted maximum-active-mean test. This i
 | sectors9 | reversal; 21d lookback, 5 holdings, 21d rebalance, SMA 0 | 14.76% | 12.60% | -41.05% | 2.26% | -2.11% to 6.51% |
 | broad7 | reversal; 21d lookback, 1 holdings, 21d rebalance, SMA 0 | 12.25% | 12.92% | -40.26% | 0.11% | -7.01% to 6.91% |
 
-The benchmark uses the same universe and rebalance cadence. Active mean is an arithmetic return difference, not CAGR difference or factor alpha.
+The benchmark uses the same universe and rebalance cadence. Active mean is an arithmetic return difference, not CAGR difference or factor alpha. The selected-rule intervals are unadjusted for selection; the separate maximum-active-mean diagnostics below account for the within-panel parameter search.
 
 ## Full-grid behavior at 10bp, 2020–2025
 
