@@ -1,0 +1,37 @@
+name: Review public-data study artifacts
+on:
+  push:
+    branches: [codex/public-data-sweep-2026-09-27]
+    paths:
+      - 'research/public_sweep_analysis/**'
+      - '.github/workflows/public-data-review.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+defaults:
+  run:
+    shell: bash
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: public-data-study-summaries
+          run-id: 36375746801
+          github-token: ${{ github.token }}
+          path: work/sweep-analysis/input
+      - name: Audit complete grid and summarize costs and transfer
+        run: python research/public_sweep_analysis/analyze_results.py
+      - name: Retain independent results review
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: public-data-independent-review
+          path: work/sweep-analysis/summary/
+          retention-days: 90
+          if-no-files-found: error
