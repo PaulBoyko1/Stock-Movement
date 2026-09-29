@@ -1,0 +1,34 @@
+{
+  "study": "PDS01",
+  "source_run_url": "https://github.com/PaulBoyko1/Stock-Movement/actions/runs/36375746801",
+  "review_run_url": "https://github.com/PaulBoyko1/Stock-Movement/actions/runs/36525035427",
+  "source_artifact_id": 10950907873,
+  "artifact_digest": "sha256:e04edf48a9ff5ba83cfac5da24c21c628a61be8dc8edb553ae13a2a81556b312",
+  "artifact_expires_at": "2026-12-27T03:57:49Z",
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.3",
+    "pandas": "2.3.2",
+    "yfinance": "1.7.0",
+    "commit": "fb8d60537b5bc1825dbc5c955d922d8b300ed231",
+    "started_at": "2026-09-28T03:58:09.845452+00:00",
+    "code_sha256": "ec4443fdb25be02db147333abb2f8500f02bf4beb2c8a41a29902cf274ffd4d8",
+    "protocol_sha256": "8d7a0824bf5e3a8cc9cfc1ad520dd19871b4ce044aca01942cb824ecaf5a0a3c"
+  },
+  "tests_passed": 14,
+  "failures": [],
+  "retention": "Raw/vendor snapshots were temporary. All-trial metrics reside in the downloadable summary artifact; selected and aggregate metrics/source manifests are retained in this repository.",
+  "local_app_changed": false,
+  "independent_review_checks": [
+    "All 5,508 distinct strategy/cost entries present",
+    "459 signal variants per panel",
+    "All 36 downloaded ETF datasets have zero invalid OHLC rows",
+    "No ordinary return reconciliation differences above 20bp recorded",
+    "Original validation selection independently reproduced for all panels",
+    "Higher costs never increased a candidate's CAGR in any period",
+    "Three period returns multiply to the full-period return at zero costs",
+    "Drawdown and exposure ranges checked",
+    "Canonical data copies excluded from source-observation counts",
+    "Raw snapshots unavailable here: no new validation of provider history, corporate actions or full daily ledgers"
+  ]
+}
